@@ -1,7 +1,7 @@
 public class Janitor extends Employee{
 
-    public Janitor(int initialYears, String employeeId, String employeeName) {
-        super(initialYears, employeeId, employeeName);
+    public Janitor(int employeeId, String employeeName, int initialYears) {
+        super(employeeId, employeeName, initialYears);
     }
 
     public int getHours() { return super.getHours() * 2; }
