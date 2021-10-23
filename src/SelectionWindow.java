@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 
 public class SelectionWindow extends JFrame{
     private JButton btIndividual;
-    private JButton btGlobal = new JButton("Vista global");
+    private JButton btGlobal;
     private JPanel pMain;
-    private JTextArea tIndication = new JTextArea("Seleccione la vista para ver los empleados");
+    private JTextArea tIndication;
 
     private final int WIDTH = 600, HEIGHT = 200;
 
@@ -22,7 +22,7 @@ public class SelectionWindow extends JFrame{
         setContentPane(pMain);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        //tIndication.append("Elige la vista para deplegar los empleados");
+        tIndication.append("Elige la vista para deplegar los empleados");
 
         btGlobal.setVisible(true);
 
