@@ -7,7 +7,7 @@ public class Employee {
     private final String id;
     private final String name;
 
-    public Employee(int initialYears, String employeeId, String employeeName) {
+    public Employee(String employeeId, String employeeName, int initialYears) {
         years = initialYears;
         id = employeeId;
         name = employeeName;

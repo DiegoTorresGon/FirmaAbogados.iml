@@ -1,7 +1,7 @@
 public class Secretary extends Employee {
 
-    public Secretary(int initialYears, String employeeId, String employeeName) {
-        super(initialYears, employeeId, employeeName);
+    public Secretary(String employeeId, String employeeName, int initialYears) {
+        super(employeeId, employeeName, initialYears);
     }
 
     // Secretarios no obtienen bono por sus años de servicio.

@@ -1,8 +1,8 @@
 // Clase para representar secretarios legales
 public class LegalSecretary extends Secretary {
 
-    public LegalSecretary(int initialYears, String employeeId, String employeeName) {
-        super(initialYears, employeeId, employeeName);
+    public LegalSecretary(String employeeId, String employeeName, int initialYears) {
+        super(employeeId, employeeName, initialYears);
     }
 
     public String fileLegalBriefs() {
