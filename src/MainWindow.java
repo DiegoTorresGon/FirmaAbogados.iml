@@ -48,7 +48,7 @@ public class MainWindow  extends JFrame {
 
         //Reading list of employees
         try {
-            Scanner input = new Scanner(new File("src\\empleados.txt"));
+            Scanner input = new Scanner(new File("src\\empleados_2.txt"));
 
             employeeList = new ArrayList[6];
 
