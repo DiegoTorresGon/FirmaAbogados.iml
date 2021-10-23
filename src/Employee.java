@@ -20,7 +20,7 @@ public class Employee {
 
     public double getSalary()
     {
-        return 40000.0;		// $50,000.00 / año
+        return 40000.0;		// $40,000.00 / año
     }
 
     public int getVacationDays()
