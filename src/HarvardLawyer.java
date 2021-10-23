@@ -13,6 +13,17 @@ public class HarvardLawyer extends Lawyer{
     }
 
     public String getVacationForm() {
-        return "pinkpinkpinkpink";
+
+        int rep = 4;
+
+        String repeatVacationForm = "";
+
+        for (int i = 1; i <= rep; i++) {
+            repeatVacationForm += super.getVacationForm();
+        }
+
+        return repeatVacationForm;
+
     }
+
 }

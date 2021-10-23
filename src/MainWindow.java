@@ -48,27 +48,30 @@ public class MainWindow  extends JFrame {
 
         //Reading list of employees
         try {
-            Scanner input = new Scanner(new File("src\\empleados.txt"));
+            Scanner input = new Scanner(new File("src\\employees.txt"));
+
+            input.nextLine();
 
             employeeList = new ArrayList[6];
 
             for (int i = 0; i < 6; ++i) employeeList[i] = new ArrayList<>();
 
-            input.nextLine();
+            while (input.hasNextLine()) {
+                String line = input.nextLine();
+                Scanner lineScan = new Scanner(line);
 
-            int e;
-
-            while (input.hasNext()) {
-                String name = input.next();
-                e = input.nextInt();
+                int e = lineScan.nextInt();
+                int id = lineScan.nextInt();
+                String name = lineScan.next() + " " + lineScan.next();
+                int years = lineScan.nextInt();
 
                 switch (e) {
-                    case Job.HARVARDLAWYER -> employeeList[e].add(new HarvardLawyer(input.nextInt(), input.next(), name));
-                    case Job.JANITOR -> employeeList[e].add(new Janitor(input.nextInt(), input.next(), name));
-                    case Job.LAWYER -> employeeList[e].add(new Lawyer(input.nextInt(), input.next(), name));
-                    case Job.LEGALSECRETARY -> employeeList[e].add(new LegalSecretary(input.nextInt(), input.next(), name));
-                    case Job.MARKETER -> employeeList[e].add(new Marketer(input.nextInt(), input.next(), name));
-                    case Job.SECRETARY -> employeeList[e].add(new Secretary(input.nextInt(), input.next(), name));
+                    case Job.HARVARDLAWYER -> employeeList[e].add(new HarvardLawyer(id, name, years));
+                    case Job.JANITOR -> employeeList[e].add(new Janitor(id, name, years));
+                    case Job.LAWYER -> employeeList[e].add(new Lawyer(id, name, years));
+                    case Job.LEGALSECRETARY -> employeeList[e].add(new LegalSecretary(id, name, years));
+                    case Job.MARKETER -> employeeList[e].add(new Marketer(id, name, years));
+                    case Job.SECRETARY -> employeeList[e].add(new Secretary(id, name, years));
                 }
             }
 
