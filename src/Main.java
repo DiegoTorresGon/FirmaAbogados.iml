@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -10,7 +11,10 @@ public class Main {
       
         MainWindow mainWindow = new MainWindow();
 
+
+        //Window2 window2 = new Window2();
         GeneralWindow genWindow = new GeneralWindow();
+
 
 
     }
