@@ -56,6 +56,8 @@ public class IndividualWindow extends JFrame {
 
             employeeList = new ArrayList[6];
 
+
+
             for (int i = 0; i < 6; ++i) employeeList[i] = new ArrayList<>();
 
             while (input.hasNextLine()) {
@@ -80,6 +82,8 @@ public class IndividualWindow extends JFrame {
         } catch (FileNotFoundException e) {
             System.out.println("Error: " + e);
         }
+
+        liEmployeeList.setListData(employeeList[0].toArray(new Employee[0]));
 
         //Listener for cbEmployeeType
         cbEmployeeType.addActionListener(new ActionListener() {
