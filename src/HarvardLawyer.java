@@ -1,6 +1,6 @@
 public class HarvardLawyer extends Lawyer{
 
-    public HarvardLawyer(String employeeId, String employeeName, int initialYears) {
+    public HarvardLawyer(int employeeId, String employeeName, int initialYears) {
         super(employeeId, employeeName, initialYears);
     }
 

@@ -1,7 +1,7 @@
 // Clase para representar especialistas en marketing
 public class Marketer extends Employee {
 
-    public Marketer(String employeeId, String employeeName, int initialYears) {
+    public Marketer(int employeeId, String employeeName, int initialYears) {
         super(employeeId, employeeName, initialYears);
     }
 

@@ -1,6 +1,6 @@
 public class Secretary extends Employee {
 
-    public Secretary(String employeeId, String employeeName, int initialYears) {
+    public Secretary(int employeeId, String employeeName, int initialYears) {
         super(employeeId, employeeName, initialYears);
     }
 

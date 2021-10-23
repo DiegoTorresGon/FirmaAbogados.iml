@@ -1,6 +1,6 @@
 public class Janitor extends Employee{
 
-    public Janitor(String employeeId, String employeeName, int initialYears) {
+    public Janitor(int employeeId, String employeeName, int initialYears) {
         super(employeeId, employeeName, initialYears);
     }
 

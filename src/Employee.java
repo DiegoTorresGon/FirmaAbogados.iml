@@ -4,10 +4,10 @@ import java.lang.String;
 public class Employee {
 
     private final int years;
-    private final String id;
+    private final int id;
     private final String name;
 
-    public Employee(String employeeId, String employeeName, int initialYears) {
+    public Employee(int employeeId, String employeeName, int initialYears) {
         years = initialYears;
         id = employeeId;
         name = employeeName;
@@ -48,11 +48,11 @@ public class Employee {
         return name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
     public String toString() {
-        return id + " " + name;
+        return id + "\t" + name;
     }
 }
