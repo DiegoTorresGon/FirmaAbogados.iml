@@ -3,7 +3,10 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainWindow  extends JFrame {
     private JComboBox<String> cbEmployeeType;
@@ -42,6 +45,36 @@ public class MainWindow  extends JFrame {
         //Setting ListModels for JLists
         liEmployeeList.setModel(new DefaultListModel<>());
         liEmployeeData.setModel(new DefaultListModel<>());
+
+        //Reading list of employees
+        try {
+            Scanner input = new Scanner(new File("src\\empleados_2.txt"));
+
+            employeeList = new ArrayList[6];
+
+            for (int i = 0; i < 6; ++i) employeeList[i] = new ArrayList<>();
+
+            input.nextLine();
+
+            int e;
+
+            while (input.hasNext()) {
+                String name = input.next();
+                e = input.nextInt();
+
+                switch (e) {
+                    case Job.HARVARDLAWYER -> employeeList[e].add(new HarvardLawyer(input.nextInt(), input.next(), name));
+                    case Job.JANITOR -> employeeList[e].add(new Janitor(input.nextInt(), input.next(), name));
+                    case Job.LAWYER -> employeeList[e].add(new Lawyer(input.nextInt(), input.next(), name));
+                    case Job.LEGALSECRETARY -> employeeList[e].add(new LegalSecretary(input.nextInt(), input.next(), name));
+                    case Job.MARKETER -> employeeList[e].add(new Marketer(input.nextInt(), input.next(), name));
+                    case Job.SECRETARY -> employeeList[e].add(new Secretary(input.nextInt(), input.next(), name));
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: " + e);
+        }
 
         //Listener for cbEmployeeType
         cbEmployeeType.addActionListener(new ActionListener() {

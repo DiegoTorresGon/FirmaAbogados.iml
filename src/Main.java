@@ -6,7 +6,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        SelectionWindow selection = new SelectionWindow();
+        //SelectionWindow selection = new SelectionWindow()
+      
+        MainWindow mainWindow = new MainWindow();
+
+        GeneralWindow genWindow = new GeneralWindow();
+
+
     }
 }
 

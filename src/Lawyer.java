@@ -1,8 +1,8 @@
 // Clase para representar abogados
 public class Lawyer extends Employee {
 
-    public Lawyer(int initialYears, String employeeId, String employeeName) {
-        super(initialYears, employeeId, employeeName);
+    public Lawyer(int employeeId, String employeeName, int initialYears) {
+        super(employeeId, employeeName, initialYears);
     }
 
     public double getSalary() {
