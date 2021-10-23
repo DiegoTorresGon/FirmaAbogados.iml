@@ -22,7 +22,7 @@ public class SelectionWindow extends JFrame{
         setContentPane(pMain);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        tIndication.append("Elige la vista para deplegar los empleados");
+        tIndication.append("Elige la vista para desplegar los empleados");
 
         btGlobal.setVisible(true);
 

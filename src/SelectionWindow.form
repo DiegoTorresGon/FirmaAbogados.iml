@@ -32,7 +32,9 @@
           </grid>
           <gridbag weightx="2.0" weighty="1.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="JetBrains Mono" size="18" style="3"/>
+        </properties>
       </component>
     </children>
   </grid>
