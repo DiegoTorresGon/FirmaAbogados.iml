@@ -20,6 +20,7 @@ public class GeneralWindow extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(600, 750);
         setLocationRelativeTo(null);
+        setVisible(true);
 
     }
 

@@ -53,6 +53,6 @@ public class Employee {
     }
 
     public String toString() {
-        return id + "\t" + name;
+        return id + "  " + name;
     }
 }

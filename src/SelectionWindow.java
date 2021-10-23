@@ -33,7 +33,7 @@ public class SelectionWindow extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 btGlobal.updateUI();
                 setVisible(false);
-                GlobalWindow mainWindow = new GlobalWindow();
+                GeneralWindow mainWindow = new GeneralWindow();
                 dispose();
             }
         });
